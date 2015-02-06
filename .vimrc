@@ -1,0 +1,1 @@
+/Users/leonardojimenez/.vim/janus/vim/vimrc
