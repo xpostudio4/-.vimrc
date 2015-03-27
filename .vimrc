@@ -2,6 +2,7 @@
 "" Janus setup
 ""
 
+set nocompatible
 " Define paths
 let g:janus_path = escape(fnamemodify(resolve(expand("<sfile>:p")), ":h"), ' ')
 let g:janus_vim_path = escape(fnamemodify(resolve(expand("<sfile>:p" . "vim")),>
@@ -51,3 +52,21 @@ noremap <Down> <NOP>
 noremap <Left> <NOP>
 noremap <Right> <NOP>
 
+" syntastic configuration
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+
+" configure custom syntax colors
+syntax on
+
+" color scheme in ~/.vim/janus/colors/
+colorscheme dracula
+
+" configure 256 colors in the terminal
+set t_Co=16
